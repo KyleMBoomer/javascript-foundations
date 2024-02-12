@@ -68,7 +68,7 @@ describe('Dragon', function() {
     assert.equal(dragon.timesEaten, 0);
   });
 
-  it.skip('should start off being hungry', function() {
+  it('should start off being hungry', function() {
     var dragon = createDragon('Mushu', 'Mulan', 'aggressive');
 
     assert.equal(dragon.hungry, true);
