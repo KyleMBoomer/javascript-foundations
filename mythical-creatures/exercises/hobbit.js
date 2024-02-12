@@ -1,7 +1,13 @@
-
+function createHobbit(name, age) {
+var hobbit = {
+  name: name,
+  age: age
+  }
+return hobbit 
+}
 
 module.exports = {
-  // createHobbit, 
+  createHobbit, 
   // celebrateBirthday, 
   // getRing, 
   // meetPeople, 
