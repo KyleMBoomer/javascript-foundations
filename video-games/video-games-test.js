@@ -1,4 +1,4 @@
-var { createPlayer, createLevel, findCoins } = require('./video-games');
+var { createPlayer, createLevel, findCoins, defeatPlayer } = require('./video-games');
 var assert = require('chai').assert;
 
 describe('video games', function () {
@@ -73,7 +73,7 @@ describe('video games', function () {
       assert.equal(updatedLevel.coins, 5);
    });
 
-   it.skip('should add a life when 100 coins are collected', function () {
+   it('should add a life when 100 coins are collected', function () {
       var player1 = createPlayer('The Fiery Friar', 50, ['flame spin', 'fire dance', 'smoke screen']);
       var level = createLevel('Water Temple', [player1]);
 
@@ -87,7 +87,7 @@ describe('video games', function () {
       assert.equal(level.lives, 4);
    });
 
-   it.skip('should be able to defeat the player and cost a life', function () {
+   it('should be able to defeat the player and cost a life', function () {
       var player1 = createPlayer('Tony Thrasher', 34, ['thrash throw', 'solving mysteries', 'thrash dance']);
       var level = createLevel('Alien Outpost', [player1]);
 
@@ -100,7 +100,7 @@ describe('video games', function () {
       assert.equal(updatedLevelPlayerFell.lives, 2);
    }); 
 
-   it.skip('should print `GAME OVER` when a player is defeated and has no lives left', function () {
+   it('should print `GAME OVER` when a player is defeated and has no lives left', function () {
       var player1 = createPlayer('Ant Cat', 3, ['tiny roar', 'six-legged claws', 'dig tunnel']);
       var level = createLevel('Alien Outpost', [player1]);
 

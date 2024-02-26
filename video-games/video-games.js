@@ -7,24 +7,32 @@ function createPlayer(name, age, moveset) {
   return player
 }
 
-function createLevel(name, players, coins, lives) {
+function createLevel(name, player, coins, lives) {
     var level = {
         name: name,
-        players: players,
-        coins: 0 || 5,
-        lives: 3
+        players: player,
+        coins: coins || 0,
+        lives: lives || 3
     }
     return level
 }
 
-function findCoins(level) {
-var updatedLevel = level.coins += 5
-console.log('updatedlevel', updatedLevel)
+function findCoins(level, coins) {
+var updatedLevel = {coins : coins}
+if (updatedLevel.coins === 100) {
+  level.lives = level.lives +1
+}
 return updatedLevel
+}
+
+function defeatPlayer(lives) {
+   lives.lives-=1
+  if (lives.lives === 0) {
+    return `GAME OVER`
+  }
+return lives
 }
 
 
 
-
-
-module.exports = {createPlayer, createLevel, findCoins };
+module.exports = {createPlayer, createLevel, findCoins, defeatPlayer };
