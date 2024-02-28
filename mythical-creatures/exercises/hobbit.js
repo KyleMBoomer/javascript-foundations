@@ -1,19 +1,20 @@
 function createHobbit(name, age) {
 var hobbit = {
-    name: name,
-    age: age
+    name: name || 'unknown',
+    age: age || 0
    }
-  //  if (!(hobbit.age >= 1)) {
-    
-  //  }
     return hobbit
   }
 
+  function celebrateBirthday(hobbit) {
+    hobbit.age = hobbit.age + 1
+    return hobbit 
+  }
 
 
 module.exports = {
   createHobbit, 
-  // celebrateBirthday, 
+  celebrateBirthday, 
   // getRing, 
   // meetPeople, 
   // findFriends

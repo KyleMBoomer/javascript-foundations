@@ -20,14 +20,14 @@ describe('Hobbit', function() {
     assert.equal(bilbo.age, 0);
   });
 
-  it.skip('should return an object with defaults if nothing passed', function() {
+  it('should return an object with defaults if nothing passed', function() {
     var hobbit = createHobbit();
 
     assert.equal(hobbit.name, 'unknown');
     assert.equal(hobbit.age, 0);
   });
 
-  it.skip('should gain 1 year after every birthday', function() {
+  it('should gain 1 year after every birthday', function() {
     var hobbit = createHobbit('Meriadoc');
 
     var olderHobbit = celebrateBirthday(hobbit);
@@ -37,7 +37,7 @@ describe('Hobbit', function() {
     assert.equal(evenOlderStillHobbit.age, 3);
   });
 
-  it.skip('should be considered a child at the age of 32', function() {
+  it('should be considered a child at the age of 32', function() {
     var taylor = createHobbit('Taylor', 31);
 
     assert.equal(taylor.age, 31);
