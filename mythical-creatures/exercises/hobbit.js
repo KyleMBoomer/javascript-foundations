@@ -1,10 +1,15 @@
 function createHobbit(name, age) {
 var hobbit = {
-  name: name,
-  age: age
+    name: name,
+    age: age
+   }
+  //  if (!(hobbit.age >= 1)) {
+    
+  //  }
+    return hobbit
   }
-return hobbit 
-}
+
+
 
 module.exports = {
   createHobbit, 
