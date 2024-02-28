@@ -31,9 +31,10 @@ function inquirePlace(locations) {
   var places = locations
 for (var i = 0; i < locations.length; i++) {
   console.log('[]',locations)
-  if (locations === 'New Orleans') {
+  if (places.includes('New Orleans')) {
     return `Yes, I have spent some time in New Orleans.`
-    } else if (locations !== 'Idaho') {
+    }
+    if (places !== `${locations}`) {
       return `No, I have never been to Idaho.`
     }
   }
