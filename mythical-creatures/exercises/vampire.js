@@ -27,16 +27,15 @@ if (vampire.ouncesDrank <= 40) {
   return vampire
 }
 
-function inquirePlace(locations) {
+function inquirePlace(locations, string) {
+  console.log('locations', locations)
   var places = locations
 for (var i = 0; i < locations.length; i++) {
-  console.log('[]',locations)
-  if (places.includes('New Orleans')) {
-    return `Yes, I have spent some time in New Orleans.`
-    }
-    if (places !== `${locations}`) {
-      return `No, I have never been to Idaho.`
-    }
+  if (places.includes(`${string}`)) {
+    return `Yes, I have spent some time in ${string}.`
+    } else {
+    return `No, I have never been to ${string}.`
+  }
   }
 }
 
