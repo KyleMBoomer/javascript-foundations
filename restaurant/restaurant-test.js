@@ -3,7 +3,7 @@ var { createMeal, getMade, createOrder, cookMeal, listOrders, announceMeal, list
 
 describe('Meal', function () {
 
-  it.skip('should have a name, special requests, and table number', function () {
+  it('should have a name, special requests, and table number', function () {
     var shrimpTacos = createMeal('Shrimp Tacos', ["no cheese"], 14);
     var appetizer = createMeal('Jicama & Cucumber Salad', [], 12);
 

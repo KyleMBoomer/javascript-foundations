@@ -28,16 +28,14 @@ return playlist
 
 function playSongs(playlist){
   for (var i = 0; i < playlist.songs.length; i++) {
-playlist.songs[i].hasBeenPlayed = true;
-for (var j = 0; j < playlist.songs.length; j++) {
-  if (playlist.songs[i].favorite === false) {
-    playlist.songs[i].hasBeenPlayed = false
+  playlist.songs[i].hasBeenPlayed = true;
+    for (var j = 0; j < playlist.songs.length; j++) {
+      if (playlist.songs[i].favorite === false) {
+        playlist.songs[i].hasBeenPlayed = false
       }
-      console.log('playlist loop2', playlist)
-   }
-   console.log('playlist loop1', playlist)
-}
-console.log('playlist return', playlist)
+    }
+  }
+  console.log('playlist return', playlist)
 return playlist
 }
 

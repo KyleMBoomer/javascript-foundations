@@ -57,7 +57,7 @@ describe("Collection", function(){
   it('should be able to handle an empty collection', function() {
     var collection = createCollection()
 
-    assert.equal(collection, 'Your collection is empty.')
+    assert.equal(collection,'Your collection is empty.' )
   })
 
   it.skip("should print out all the tape titles that are in the collection", function(){
