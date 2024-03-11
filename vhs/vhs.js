@@ -1,7 +1,7 @@
 function createTape(title, readyToPlay = false) {
     var tape = {
         title: title,
-        readyToPlay: readyToPlay
+        readyToPlay: readyToPlay 
     }
     return tape
 }
@@ -24,10 +24,19 @@ function createCollection(...args) {
   return 'Your collection is empty.'
 }
 
+function previewCollection(collection) {
+    var allTitles = []
+    for (var i = 0; i < collection.length; i++) {
+        allTitles.push(collection[i].title)
+    }
+return allTitles
+}
+
+
 
 module.exports = {
     createTape,
     reset,
     createCollection,
-    // previewCollection
+    previewCollection
 }

@@ -60,7 +60,7 @@ describe("Collection", function(){
     assert.equal(collection,'Your collection is empty.' )
   })
 
-  it.skip("should print out all the tape titles that are in the collection", function(){
+  it("should print out all the tape titles that are in the collection", function(){
     var homeAlone = createTape("Home Alone", false);
     var flubber = createTape("Flubber", false)
     var neverEndingStory = createTape("The Never Ending Story", false)
