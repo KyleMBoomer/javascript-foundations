@@ -21,4 +21,13 @@ function createCalendar(owner, events) {
  return calendar 
 }
 
-module.exports = {createEvent, createCalendar};
+function reportMonthlyEvents(array, string) {
+    var month = []
+for (var i = 0; i < array.events.length; i++) {
+    if (array.events[i].month === string) {
+        month.push(array.events[i])
+    }
+  }
+  return month 
+}
+module.exports = {createEvent, createCalendar, reportMonthlyEvents};
