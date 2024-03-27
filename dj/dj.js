@@ -26,19 +26,21 @@ playlist.songs.push(song)
 return playlist
 }
 
-function playSongs(playlist){
-  for (var i = 0; i < playlist.songs.length; i++) {
-  playlist.songs[i].hasBeenPlayed = true;
-    for (var j = 0; j < playlist.songs.length; j++) {
-      if (playlist.songs[i].favorite === false) {
-        playlist.songs[i].hasBeenPlayed = false
-      }
-    }
+function playSongs(playlist, string){
+  var isFavoritesOnly = string === 'favorites only'
+for (var i = 0; i < playlist.songs.length; i++) {
+  if (isFavoritesOnly) {
+   if (playlist.songs[i].favorite === true) {
+    playlist.songs[i].hasBeenPlayed = true
+   }
+  } else {
+    playlist.songs[i].hasBeenPlayed = true
   }
-  console.log('playlist return', playlist)
+}
 return playlist
 }
-
+//if song.favorite === true
+//if 
 module.exports = { 
   createSong, 
   playSong, 

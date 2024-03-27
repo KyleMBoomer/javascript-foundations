@@ -84,11 +84,11 @@ describe('dj', function() {
       var shuffleSong = createSong('Santa\'s Sleigh Ride Shuffle', 'The Jolly Jinglesters')
       var reggaeSong = createSong('Rudolph\'s Reggae Jam', 'The Reindeer Rhythms', true)
 
-      // Add all three songs to a holiday playlist.
+   
       var holidayPlaylist = makePlaylist('Holiday Songs', [rockinSong, shuffleSong, reggaeSong]); 
-      // Play only the favorite songs in the playlist.
+ 
       var updatedHolidayPlaylist = playSongs(holidayPlaylist, "favorites only") 
-      // Assert that the favorite songs have been played, while the non-favorite hasn't.
+    
       assert.equal(updatedHolidayPlaylist.songs[0].hasBeenPlayed, true)
       assert.equal(updatedHolidayPlaylist.songs[1].hasBeenPlayed, false)
       assert.equal(updatedHolidayPlaylist.songs[2].hasBeenPlayed, true)
