@@ -28,6 +28,8 @@ function createOrder(order) {
 }
 
 function cookMeal(order, meal) {
+  console.log('order', order)
+  console.log('meal', meal)
   for (var i = 0; i < order.meals.length; i++) {
     if (order.meals[i].name === meal.name && order.tableNumber === meal.tableNumber) {
       order.completedMeals.push(order.meals[i].name)

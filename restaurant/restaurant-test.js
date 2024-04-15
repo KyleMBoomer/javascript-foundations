@@ -57,7 +57,7 @@ describe('Order', function () {
     assert.equal(order.meals, meals);
   });
 
-  it.skip('should have no complete meals by default', function () {
+  it('should have no complete meals by default', function () {
     var meal1 = createMeal('Pico de Gallo Quesadillas', [], 3);
     var meal2 = createMeal('Sombra Shroom Griddled Tacos', ['crema'], 3);
     var meal3 = createMeal('The Situation Gordita', ["cilantro", "onion"], 3);
